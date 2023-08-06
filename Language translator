@@ -1,1 +1,85 @@
 // type your code here
+<!doctypehtml>
+<html>
+<head>
+<title>Language Translator</title>
+<link rel ="icon"type="image/X-icon" href="icon.jpg">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+body
+{
+  background-color:  #f2f2f2;
+}
+.title
+{
+ text-align: center;
+ font-size: 35px;
+ background-color: black;
+ color: white;
+}
+#in,#out
+{
+ font-size: 20px;
+ width: 350px;
+ height: 50px;
+}
+.main
+{
+  width: 850px;
+  margin: auto;
+}
+.input
+{
+  float: left;
+  clear: right;
+  text-align: center;
+  font-size: 40px;
+  width: 400px;
+  height: 350px;
+  border: 2px solid black;
+}
+.output
+{
+  float: left;
+  clear: right;
+  text-align: center;
+  font-size: 40px;
+  width: 400px;
+  height: 350px;
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+<div class="title">
+<h1>Translator</h1>
+</div>
+<center>
+<div class="main">
+  <div class="input">
+    <select id="language-dropdown">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+    </select>
+    <h3>Enter text</h3>
+    <input id="in" type="text" onkeyup="display()">
+  </div>
+  <div class="output">
+  <select id="language-dropdown">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+    </select>
+    <h3>Translation</h3>
+	<input id="out" type="text" readonly>
+  </div>
+</div>
+</center>
+<script>
+function display(){
+const v=document.getElementById('in').value;
+document.getElementById('out').value = v;
+}
+</script>
+</body>
